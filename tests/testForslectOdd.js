@@ -1,0 +1,14 @@
+const assert = require("assert");
+let selectOdd = require("../library/selectingOddNumber.js").selectOdd;
+input = [1];
+input1 = [2];
+input2 = [1,2];
+input3 = [-1,3,4,6,7];
+output = [1];
+output1 = [];
+output2 = [1];
+output3 = [-1,3,7];
+assert.deepEqual(selectOdd(input) , output);
+assert.deepEqual(selectOdd(input1) , output1);
+assert.deepEqual(selectOdd(input2) , output2);
+assert.deepEqual(selectOdd(input3) , output3);
