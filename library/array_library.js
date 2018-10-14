@@ -199,14 +199,53 @@ const isSubset = function(array1,array2){
   for(index = 0; index < array2.length; index++){
     checkElement = !array1.includes(array2[index]);
     if (checkElement){
-       status = false;
+      status = false;
     }
   }
   return status;
 }
 
+const partition = function(array,number){
+  let partitionedArry = [[],[]];
+  let count = 0;
+  let count2 = 0;
+  for(let index = 0; index < array.length; index++){
+    if (number >= array[index]){
+      partitionedArry[0][count] = array[index];
+      count++;
+    }else{
+      partitionedArry[1][count2] = array[index];
+      count2++;
+    }
+  }
+  return partitionedArry;
+}
+
+const firstIndexOfValue = function(array, number){
+  for(let index=0 ; index <array.length; index++){
+    if(array[index] == number)
+      return index
+  }
+}
 
 
+const rotateArray = function(array,number){
+  let startIndex = firstIndexOfValue(array,number)+1;
+
+  let rotatedArray = [];
+
+  for(let index = startIndex; index < array.length; index++){
+    rotatedArray.push(array[index]);
+  }
+
+  for(index = 0; index < startIndex; index++){
+    rotatedArray.push(array[index]);
+  }
+  return rotatedArray;
+}
+
+exports.rotateArray = rotateArray;
+exports.partition = partition;
 exports.isSubset = isSubset;
 exports.zipArray = zipArray;
 exports.differenceOfArray = differenceOfArray;
