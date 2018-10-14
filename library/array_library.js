@@ -184,9 +184,17 @@ const differenceOfArray = function(array1,array2){
   return diffrArray;
 }
 
+const zipArray = function(firstArray, secondArray) {
+  let zippedArray = [];
+  for (let index = 0; index < firstArray.length; index++) {
+    zippedArray[index] = [];
+    zippedArray[index][0] = firstArray[index];
+    zippedArray[index][1] = secondArray[index];
+  }
+  return zippedArray;
+}
 
-
-
+exports.zipArray = zipArray;
 exports.differenceOfArray = differenceOfArray;
 exports.intersectionOfTwoArray = intersectionOfTwoArray;
 exports.concatTwoArray = concatTwoArray;
