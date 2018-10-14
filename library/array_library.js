@@ -156,6 +156,21 @@ const concatTwoArray = function(array1 , array2){
   return uniqueconcatArray;
 }
 
+const intersectionOfTwoArray = function(array1,array2){
+  let commonElementArray = [];
+  let iscommon = "";
+  let count = 0;
+  for(let index = 0; index < array2.length; index++){
+    iscommon = array1.includes(array2[index]);
+    if(iscommon){
+      commonElementArray[count] = array2[index];
+      count++
+    }
+  }
+  return commonElementArray;
+}
+
+exports.intersectionOfTwoArray = intersectionOfTwoArray;
 exports.concatTwoArray = concatTwoArray;
 exports.findUnique = findUnique;
 exports.extract = extract;
