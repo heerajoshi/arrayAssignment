@@ -139,6 +139,20 @@ const extract = function(number){
   return extractsNumber;
 }
 
+const findUnique = function(elements){
+  let uniqueElements = [];
+  for(let element of elements){
+    const shouldAdd = !uniqueElements.includes(element);
+    if(shouldAdd){
+      uniqueElements.push(element);
+    }
+  }
+  return uniqueElements;
+}
+
+
+
+exports.findUnique = findUnique;
 exports.extract = extract;
 exports.isDescendingOrder = isDescendingOrder;
 exports.isAscendingOrder = isAscendingOrder;
