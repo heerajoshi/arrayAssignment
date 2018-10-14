@@ -170,6 +170,24 @@ const intersectionOfTwoArray = function(array1,array2){
   return commonElementArray;
 }
 
+const differenceOfArray = function(array1,array2){
+  let diffrArray = [];
+  let isDifference = "";
+  let count = 0;
+  for(let index = 0; index < array1.length; index++){
+    isDifference = !array2.includes(array1[index]);
+    if(isDifference){
+      diffrArray[count] = array1[index];
+      count++
+    }
+  }
+  return diffrArray;
+}
+
+
+
+
+exports.differenceOfArray = differenceOfArray;
 exports.intersectionOfTwoArray = intersectionOfTwoArray;
 exports.concatTwoArray = concatTwoArray;
 exports.findUnique = findUnique;
