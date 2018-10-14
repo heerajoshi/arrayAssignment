@@ -150,8 +150,13 @@ const findUnique = function(elements){
   return uniqueElements;
 }
 
+const concatTwoArray = function(array1 , array2){
+  let concatedArray = array1.concat(array2);
+  let uniqueconcatArray = findUnique(concatedArray);
+  return uniqueconcatArray;
+}
 
-
+exports.concatTwoArray = concatTwoArray;
 exports.findUnique = findUnique;
 exports.extract = extract;
 exports.isDescendingOrder = isDescendingOrder;
