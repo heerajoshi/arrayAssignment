@@ -194,6 +194,20 @@ const zipArray = function(firstArray, secondArray) {
   return zippedArray;
 }
 
+const isSubset = function(array1,array2){
+  let status = true; 
+  for(index = 0; index < array2.length; index++){
+    checkElement = !array1.includes(array2[index]);
+    if (checkElement){
+       status = false;
+    }
+  }
+  return status;
+}
+
+
+
+exports.isSubset = isSubset;
 exports.zipArray = zipArray;
 exports.differenceOfArray = differenceOfArray;
 exports.intersectionOfTwoArray = intersectionOfTwoArray;
