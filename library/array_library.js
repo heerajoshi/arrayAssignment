@@ -41,15 +41,13 @@ const reverseFebonacci = function(limit){
   return reverseArray(Febonacci);
 }
 
-const findGreatestNumber = function(numbers){
-  let greatestNumber = 0;
-  for(let index = 0; index < numbers.length; index++){
-    if(numbers[index] > numbers[index +1]){
-      greatestNumber = numbers[index];
-    }
-  }
-  return greatestNumber;
+const findGreatestNumber = function(inputArray){
+  return inputArray.reduce(function(firstNum,secoundNum){
+    return Math.max(firstNum,secoundNum);
+  });
 }
+
+
 
 const findLowest = function(numbers){
   let lowestNumber = numbers[0];
