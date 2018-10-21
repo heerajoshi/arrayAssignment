@@ -1,9 +1,9 @@
-const addingElementOfArray  = function(numbers){
-  let sum = 0;
-  for(let count=0;count<numbers.length;count++){
-    sum += numbers[count];
-  }
-  return sum;
+const sumOfTwoNumber = function(a,b){
+  return a+b;
+}
+
+const addingElementOfArray  = function(inputArray){
+  return inputArray.reduce(sumOfTwoNumber);
 }
 
 const reverseArray = function(numbers){
