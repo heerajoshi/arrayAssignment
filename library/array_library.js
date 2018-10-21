@@ -17,16 +17,10 @@ const reverseArray = function(numbers){
   return reversedArray;
 }
 
-const extracteAlternateElement = function(number){
-  let filteredArray = [];
-  let count = 0;
-  for(let index = 0; index < number.length;index +=2){
-    filteredArray[count] = number[index];
-    count++;
-  }
-  return filteredArray;
+const extracteAlternateElement = function(inputArray){
+  return inputArray.filter(function(element){
+  return a%2==0})
 }
-
 
 const reverseFebonacci = function(limit){
   let firstNmber = -1;
