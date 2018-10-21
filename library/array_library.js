@@ -48,16 +48,12 @@ const findGreatestNumber = function(inputArray){
 }
 
 
-
 const findLowest = function(numbers){
-  let lowestNumber = numbers[0];
-  for(number of numbers){
-    if(lowestNumber > number){
-      lowestNumber = number;
-    }
-  }
-  return lowestNumber;
+  return inputArray.reduce(function(firstNum,secoundNum){
+    return Math.min(firstNum,secoundNum);
+  });
 }
+
 
 const averageOfArray = function(numbers){
   let average =  addingElementOfArray(numbers)/numbers.length;
