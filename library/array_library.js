@@ -6,20 +6,24 @@ const addingElementOfArray  = function(inputArray){
   return inputArray.reduce(sumOfTwoNumber);
 }
 
-const reverseArray = function(numbers){
-  let reversedArray = [];
-  let reversedArrayIndex = 0;
+const reverse = function(array,element){
+  array.unshift(element);
+  return array;
+}
 
-  for(index = numbers.length-1; index >= 0; index--){
-    reversedArray[reversedArrayIndex] = numbers[index];
-    reversedArrayIndex++;
-  }
-  return reversedArray;
+
+const reverseArray = function(array){
+  return array.reduce(reverse,[]);
 }
 
 const extracteAlternateElement = function(inputArray){
-  return inputArray.filter(function(element){
-  return a%2==0})
+  let alternateElement = [];
+  let count = 0;
+  for(let index =0;index < inputArray.length;index += 2){
+    alternateElement[count] = inputArray[index];
+    count++;
+  }
+  return alternateElement;
 }
 
 const reverseFebonacci = function(limit){
@@ -42,7 +46,7 @@ const findGreatestNumber = function(inputArray){
 }
 
 
-const findLowest = function(numbers){
+const findLowest = function(inputArray){
   return inputArray.reduce(function(firstNum,secoundNum){
     return Math.min(firstNum,secoundNum);
   });
@@ -209,16 +213,9 @@ const partition = function(array,number){
   return partitionedArry;
 }
 
-const firstIndexOfValue = function(array, number){
-  for(let index=0 ; index <array.length; index++){
-    if(array[index] == number)
-      return index
-  }
-}
-
 
 const rotateArray = function(array,number){
-  let startIndex = firstIndexOfValue(array,number)+1;
+  let startIndex = array.indexOf(number)+1;
 
   let rotatedArray = [];
 
