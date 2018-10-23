@@ -39,17 +39,21 @@ const reverseFebonacci = function(limit){
   return reverseArray(Febonacci);
 }
 
-const findGreatestNumber = function(inputArray){
-  return inputArray.reduce(function(firstNum,secoundNum){
-    return Math.max(firstNum,secoundNum);
-  });
+const findMax = function(firstNumber,secondNumber){
+  return Math.max(firstNumber,secondNumber);
 }
 
 
+const findGreatestNumber = function(inputArray){
+    return inputArray.reduce(findMax);
+}
+
+const findMin = function(firstNum,secondNum){
+  return Math.min(firstNum,secondNum);
+}
+
 const findLowest = function(inputArray){
-  return inputArray.reduce(function(firstNum,secoundNum){
-    return Math.min(firstNum,secoundNum);
-  });
+  return inputArray.reduce(findMin)
 }
 
 
